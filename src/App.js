@@ -1,25 +1,24 @@
-import logo from './logo.svg';
+import Post from "./components/Post/Post"
 import './App.css';
 
-function App() {
+const App = () => {
+const ANAKIN_IMAGE = "https://townsquare.media/site/442/files/2020/07/Star-Wars-Revenge-of-the-Sith.jpg";
+
+const RAY_IMAGE = "https://specials-images.forbesimg.com/imageserve/5e63b3c8e1e617000759130e/960x0.jpg?fit=scale";
+
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Post author={{
+      name: "Anakin skywalker",
+      photo: ANAKIN_IMAGE,
+      nickname: "@dart_vader"
+    }}
+content="WTF? Who is Ray? Why she is Skywalker? Luke...?"
+image={RAY_IMAGE}
+date={"26 лют."}
+/>
   );
 }
+
 
 export default App;
